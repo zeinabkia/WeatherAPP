@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Week5</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="src/styles.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </head>
+
+  <body>
+    <div class="border">
+      <div class="containor">
+        <form id="typename">
+          <input type="text" placeholder="Type the city name" id="enterCity" />
+          <input type="submit" value="Go" id="submitCity" />
+        </form>
+      </div>
+
+      <div class="container text-center tempreture">
+        <span class="row tempreture">
+          <div class="currently">
+            <h1 id="cityName">City Name</h1>
+            <hr />
+            <button id="CurrentLocation">Click For Current Location</button>
+            <h5 class="date">Day, Month</h5>
+            <h2>
+              <span id="h2Temp"><strong>-</strong></span>
+              <sup>
+                <a href="#" id="celsius">°C</a>
+                <a href="#" id="fahrenheit">°F</a>
+              </sup>
+            </h2>
+            <img
+              src="https://help.apple.com/assets/634D93C867B48F12442A1784/634D93C967B48F12442A1792/en_US/67aaf9dbe30989c25cbde6c6ec099213.png"
+              width="70"
+            />
+            <br />
+            <h6 id="description">Description</h6>
+          </div>
+
+          <div class="predict">
+            <div class="container text-center predictTable">
+              <div class="row">
+                <div class="col">Tue</div>
+                <div class="col">
+                  <img
+                    src="https://help.apple.com/assets/634D93C867B48F12442A1784/634D93C967B48F12442A1792/en_US/67aaf9dbe30989c25cbde6c6ec099213.png"
+                    width="30"
+                  />
+                </div>
+                <div class="col">10℃</div>
+                <div class="col">7℃</div>
+              </div>
+            </div>
+            <div class="container text-center predictTable">
+              <div class="row">
+                <div class="col">Wed</div>
+                <div class="col">
+                  <img
+                    src="https://help.apple.com/assets/634D93C867B48F12442A1784/634D93C967B48F12442A1792/en_US/67aaf9dbe30989c25cbde6c6ec099213.png"
+                    width="30"
+                  />
+                </div>
+                <div class="col">11℃</div>
+                <div class="col">8℃</div>
+              </div>
+            </div>
+            <div class="container text-center predictTable">
+              <div class="row">
+                <div class="col">Thu</div>
+                <div class="col">
+                  <img
+                    src="https://help.apple.com/assets/634D93C867B48F12442A1784/634D93C967B48F12442A1792/en_US/575900edccbc7def167f7874c02aeb0b.png"
+                    width="30"
+                  />
+                </div>
+                <div class="col">13℃</div>
+                <div class="col">8℃</div>
+              </div>
+            </div>
+            <div class="container text-center predictTable">
+              <div class="row">
+                <div class="col">Fri</div>
+                <div class="col">
+                  <img
+                    src="https://help.apple.com/assets/634D93C867B48F12442A1784/634D93C967B48F12442A1792/en_US/67aaf9dbe30989c25cbde6c6ec099213.png"
+                    width="30"
+                  />
+                </div>
+                <div class="col">9℃</div>
+                <div class="col">4℃</div>
+              </div>
+            </div>
+            <div class="container text-center predictTable">
+              <div class="row">
+                <div class="col">Sat</div>
+                <div class="col">
+                  <img
+                    src="https://help.apple.com/assets/634D93C867B48F12442A1784/634D93C967B48F12442A1792/en_US/4417bf88c7bbcd8e24fb78ee6479b362.png"
+                    width="28"
+                  />
+                </div>
+                <div class="col">5℃</div>
+                <div class="col">3℃</div>
+              </div>
+            </div>
+          </div>
+        </span>
+      </div>
+    </div>
+    <p class="footer">Coded By ZeinabSKia</p>
+
+    <script src="src/index.js"></script>
+  </body>
+</html>
