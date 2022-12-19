@@ -142,3 +142,9 @@ span {
   padding: 0x;
   margin: 0px;
 }
+.footerLink {
+  color: darkblue;
+  opacity: 100%;
+  text-decoration: none;
+  font-weight: 500;
+}
