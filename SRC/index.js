@@ -38,6 +38,7 @@ function formatDate(timestamp) {
 }
 
 function showTemperature(response) {
+  celsiusTemperature = response.data.temperature.current;
   let temperature = Math.round(response.data.temperature.current);
   let h2 = document.querySelector("#h2Temp");
   h2.innerHTML = temperature;
@@ -72,3 +73,28 @@ function cityandTemp(event) {
 }
 let cityName = document.querySelector("#typename");
 cityName.addEventListener("submit", cityandTemp);
+
+let celsiusTemperature = null;
+
+function toCelsius(event) {
+  event.preventDefault();
+  celsius.classList.add("active");
+  fahrenheit.classList.remove("active");
+  let temperature = document.querySelector("#h2Temp");
+  temperature.innerHTML = Math.round(celsiusTemperature);
+}
+
+function toFahrenheit(event) {
+  event.preventDefault();
+  celsius.classList.remove("active");
+  fahrenheit.classList.add("active");
+  let fahrenheitTemp = (celsiusTemperature * 9) / 5 + 32;
+  let temperature = document.querySelector("#h2Temp");
+  temperature.innerHTML = Math.round(fahrenheitTemp);
+}
+
+let celsius = document.querySelector("#celsius");
+celsius.addEventListener("click", toCelsius);
+
+let fahrenheit = document.querySelector("#fahrenheit");
+fahrenheit.addEventListener("click", toFahrenheit);

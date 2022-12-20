@@ -2,21 +2,20 @@ body {
   color: #f8f9fa;
 }
 .border {
-  max-width: 500px;
+  max-width: 450px;
   border-color: #ced4da;
   border-radius: 4px;
   border-width: 1px;
   padding: 10px;
   margin: 0px auto;
-  padding-top: 20px;
-  margin-top: 20px;
+  margin-top: 30px;
   display: block;
 
   background-color: black;
 }
 input#enterCity {
   padding: 0px;
-  width: 145px;
+  width: 160px;
   height: 24px;
   font-size: 12px;
   border: 1px solid rgb(248, 249, 250);
@@ -41,15 +40,16 @@ input#submitCity {
 input#submitCity:hover {
   background: #77aaf7;
 }
+
 #typename {
   margin: 0px;
   padding: 0px;
   text-align: center;
-  max-width: 200px;
+  max-width: 225px;
   text-align: center;
 }
 #date {
-  max-width: 200px;
+  max-width: 225px;
   font-size: 14px;
   font-weight: 600;
   padding: 0px;
@@ -126,7 +126,17 @@ h6 {
   text-transform: capitalize;
   margin: 0px;
   padding: 0px;
-  font-size: 13px;
+  font-size: 11px;
+}
+.active {
+  cursor: default;
+  color: #f8f9fa;
+  text-decoration: aliceblue;
+}
+
+.active:hover {
+  cursor: text;
+  color: #f8f9fa;
 }
 #celsius,
 #fahrenheit {
@@ -134,14 +144,9 @@ h6 {
   margin: 0px;
   padding: 0px;
   text-align: center;
-  color: rgb(248, 249, 250);
   text-decoration: none;
 }
-#celsius:hover,
-#fahrenheit:hover {
-  color: #77aaf7;
-  cursor: pointer;
-}
+
 #fahrenheit {
   border-left: 1px solid #8d959b;
   padding-left: 2px;
@@ -158,11 +163,16 @@ span {
   align-content: center;
   justify-content: space-around;
 }
-.container {
+div#containor {
+  padding-top: 10px;
+  padding-bottom: 5px;
+}
+span.row.container {
   flex-direction: row;
   flex-wrap: nowrap;
   align-content: center;
   justify-content: space-around;
+  margin: 0px;
 }
 #mainIcon {
   margin: 0px;
