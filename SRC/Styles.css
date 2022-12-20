@@ -7,16 +7,17 @@ body {
   border-radius: 4px;
   border-width: 1px;
   padding: 10px;
-  margin: 20px auto;
-  margin-bottom: 1px;
+  margin: 0px auto;
+  padding-top: 20px;
+  margin-top: 20px;
   display: block;
-  text-align: center;
+
   background-color: black;
 }
 input#enterCity {
   padding: 0px;
-  width: 250px;
-  height: 20px;
+  width: 145px;
+  height: 24px;
   font-size: 12px;
   border: 1px solid rgb(248, 249, 250);
   background-color: #ced4da;
@@ -41,22 +42,34 @@ input#submitCity:hover {
   background: #77aaf7;
 }
 #typename {
-  display: block;
-  margin: 0px auto;
+  margin: 0px;
   padding: 0px;
   text-align: center;
+  max-width: 200px;
+  text-align: center;
 }
+#date {
+  max-width: 200px;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 0px;
+  margin: 0px;
+  text-align: center;
+}
+
 .currently {
   max-width: 200px;
   text-align: center;
   padding: 0px;
+  padding-bottom: 2px;
 }
 .predict {
   max-width: 200px;
   text-align: center;
-  margin-top: 40px;
+  margin: 0px;
   font-size: 13px;
   padding: 0px;
+  margin-top: 20px;
 }
 div.container.text-center.tempreture {
   padding: 0px;
@@ -76,33 +89,44 @@ h4,
 h5,
 h6 {
   margin: 0px;
-  padding: 2px;
+  padding: 0px;
 }
 #cityName {
   padding-bottom: 4px;
   padding-top: 4px;
   text-transform: capitalize;
-  font-size: 35px;
-}
-hr {
-  padding: 2px;
-  margin: 0px;
-}
-h5 {
-  font-size: 15px;
-  font-weight: 400;
-}
-.h2 {
   font-size: 30px;
 }
-button {
-  font-size: 10px;
-  border-radius: 4px;
-  background-color: #8d959b;
+hr {
+  padding: 0px;
+  margin: 0px;
 }
-button:hover {
-  background-color: #77aaf7;
-  cursor: pointer;
+#CurrentLocation {
+  margin: 0px;
+  padding: 0px;
+  font-size: 13px;
+}
+#timezone {
+  font-size: 14px;
+  font-weight: 400;
+  padding: 0px;
+  margin: 0px;
+  text-align: center;
+}
+
+#h2Temp {
+  font-size: 33px;
+}
+h6 {
+  font-size: 15px;
+  text-transform: capitalize;
+  padding-top: 10px;
+}
+#humidityAndwind {
+  text-transform: capitalize;
+  margin: 0px;
+  padding: 0px;
+  font-size: 13px;
 }
 #celsius,
 #fahrenheit {
@@ -133,6 +157,18 @@ span {
   flex-wrap: nowrap;
   align-content: center;
   justify-content: space-around;
+}
+.container {
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: space-around;
+}
+#mainIcon {
+  margin: 0px;
+
+  width: 80px;
+  padding: 0px;
 }
 .footer {
   text-align: center;

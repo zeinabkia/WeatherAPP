@@ -11,26 +11,33 @@
       integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="src/styles.css" />
+    <link rel="stylesheet" href="src/Styles.css" />
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   </head>
 
   <body>
     <div class="border">
-      <div class="containor">
-        <form id="typename">
-          <input type="text" placeholder="Type the city name" id="enterCity" />
-          <input type="submit" value="Go" id="submitCity" />
-        </form>
+      <div id="containor">
+        <span class="row containor">
+          <form id="typename">
+            <input
+              type="text"
+              placeholder="Type the city name"
+              id="enterCity"
+            />
+            <input type="submit" value="Go" id="submitCity" />
+          </form>
+          <p id="date">Date, Clock</p>
+        </span>
       </div>
-
       <div class="container text-center tempreture">
         <span class="row tempreture">
           <div class="currently">
             <h1 id="cityName">City Name</h1>
             <hr />
-            <button id="CurrentLocation">Click For Current Location</button>
-            <h5 class="date">Day, Month</h5>
+            <p id="CurrentLocation">Currently</p>
+            <h5 id="timezone"></h5>
+            <img src="" id="mainIcon" />
             <h2>
               <span id="h2Temp"><strong>-</strong></span>
               <sup>
@@ -38,12 +45,8 @@
                 <a href="#" id="fahrenheit">°F</a>
               </sup>
             </h2>
-            <img
-              src="https://help.apple.com/assets/634D93C867B48F12442A1784/634D93C967B48F12442A1792/en_US/67aaf9dbe30989c25cbde6c6ec099213.png"
-              width="70"
-            />
-            <br />
             <h6 id="description">Description</h6>
+            <p id="humidityAndwind">HumidityAndWind</p>
           </div>
 
           <div class="predict">
