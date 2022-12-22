@@ -109,7 +109,7 @@ function showLocalTime(response) {
 }
 
 function getlocalTime(coordinates) {
-  let apiU = `http://api.timezonedb.com/v2.1/get-time-zone?key=17XRENCNP355&format=json&by=position&lat=${coordinates.latitude}&lng=${coordinates.longitude}`;
+  let apiU = `https://api.timezonedb.com/v2.1/get-time-zone?key=17XRENCNP355&format=json&by=position&lat=${coordinates.latitude}&lng=${coordinates.longitude}`;
   axios.get(apiU).then(showLocalTime);
 }
 function showTemperature(response) {
