@@ -54,8 +54,8 @@ input#submitCity:hover {
 }
 #date {
   max-width: 200px;
-  font-size: 15px;
-  font-weight: 600;
+  font-size: 13px;
+  font-weight: 500;
   padding: 0px;
   margin: 0px;
   text-align: center;
