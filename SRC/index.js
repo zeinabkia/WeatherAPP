@@ -42,6 +42,7 @@ function formatDay(timestamp) {
 }
 
 function displayforecast(response) {
+  console.log(response);
   let forecast = response.data.daily;
   let forecastElement = document.querySelector("#forecast");
   let forecastHTML = `<div class="container text-center forecastTable">`;
@@ -70,14 +71,14 @@ function displayforecast(response) {
   forecastElement.innerHTML = forecastHTML + `</div>`;
 }
 
-function getForecast(city) {
-  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=e3f5c70f0f06tb1d5a445afb715o7c01&units=metric`;
+function getForecast(cityName) {
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${cityName}&key=e3f5c70f0f06tb1d5a445afb715o7c01&units=metric`;
   axios.get(apiUrl).then(displayforecast);
 }
 
 function findCityforecast() {
   let cityInput = document.querySelector("#enterCity");
-  getForecast(cityInput.value);
+  getForecast();
 }
 
 function formatDate(formatted) {
@@ -113,6 +114,7 @@ function getlocalTime(coordinates) {
   axios.get(apiU).then(showLocalTime);
 }
 function showTemperature(response) {
+  city = response.data.city;
   celsiusTemperature = response.data.temperature.current;
   let temperature = Math.round(response.data.temperature.current);
   let h2 = document.querySelector("#h2Temp");
@@ -133,12 +135,12 @@ function showTemperature(response) {
     `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`
   );
 
-  findCityforecast();
+  getForecast(city);
   getlocalTime(response.data.coordinates);
 }
 
-function findCity(city) {
-  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=e3f5c70f0f06tb1d5a445afb715o7c01&units=metric`;
+function findCity(cityName) {
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${cityName}&key=e3f5c70f0f06tb1d5a445afb715o7c01&units=metric`;
   axios.get(apiUrl).then(showTemperature);
 }
 function submitCity(event) {
@@ -165,13 +167,13 @@ function toFahrenheit(event) {
 }
 
 function toFahrenheitF(event) {
-  let city = document.querySelector("#h2Temp").innerHTML;
+  event.preventDefault();
   let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=e3f5c70f0f06tb1d5a445afb715o7c01&units=imperial`;
   axios.get(apiUrl).then(displayforecast);
 }
 
 function toCelsiusF(event) {
-  let city = document.querySelector("#h2Temp").innerHTML;
+  event.preventDefault();
   let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=e3f5c70f0f06tb1d5a445afb715o7c01&units=metric`;
   axios.get(apiUrl).then(displayforecast);
 }
@@ -194,6 +196,5 @@ let fahrenheit = document.querySelector("#fahrenheit");
 fahrenheit.addEventListener("click", callbothFahrenheitF);
 let celsiusTemperature = null;
 setInterval(liveTime, 1000);
-
-findCity("Tehran");
-getForecast("Tehran");
+let city = "Tehran";
+findCity(city);
