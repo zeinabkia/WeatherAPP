@@ -76,11 +76,6 @@ function getForecast(cityName) {
   axios.get(apiUrl).then(displayforecast);
 }
 
-function findCityforecast() {
-  let cityInput = document.querySelector("#enterCity");
-  getForecast();
-}
-
 function formatDate(formatted) {
   let date = new Date(formatted);
   let hours = date.getHours();
