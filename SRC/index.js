@@ -1,7 +1,5 @@
 function liveTime() {
   let now = new Date();
-  let currentDay = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-  let Day = currentDay[now.getDay()];
   let months = [
     "Jan",
     "Feb",
@@ -32,7 +30,7 @@ function liveTime() {
     second = `0${second}`;
   }
   let currentTime = document.querySelector("#date");
-  currentTime.innerHTML = `${hour}:${min}:${second} ${Day}, ${month} ${exactDay}, ${year}`;
+  currentTime.innerHTML = `${hour}:${min}:${second}, ${month} ${exactDay}, ${year}`;
 }
 
 function formatDay(timestamp) {
@@ -50,7 +48,7 @@ function displayforecast(response) {
     forecastHTML =
       forecastHTML +
       `
-      <div class="row">
+      <div class="row fTable">
   <div class="col">${formatDay(forecastDay.time)}</div>
   <div class="col " id="minmax">
     ${Math.round(forecastDay.temperature.maximum)}°
