@@ -1,9 +1,7 @@
 body {
   color: whitesmoke;
   font-weight: 600;
-  font-family: "Playfair Display", serif !important;
 }
-
 
 .border {
   max-width: 450px;
@@ -11,8 +9,11 @@ body {
   padding: 0px;
   margin: 0px auto;
   display: grid;
-   background-image: url("/images/BG.gif");
-  background-size: cover;
+  background: linear-gradient(
+    112.1deg,
+    rgb(32, 38, 57) 11.4%,
+    rgb(63, 76, 119) 70.2%
+  );
   margin-top: 30px;
   padding: 10px;
   padding-bottom: 20px;
@@ -23,24 +24,23 @@ body {
   width: 155px;
   height: 25px;
   font-size: 13px;
-  border:none;
- background-color: rgba(105, 105, 105, 0.37);
+  border: none;
+  background-color: rgba(105, 105, 105, 0.37);
   letter-spacing: 2px;
   border-radius: 4px;
   color: #696e72;
-   box-shadow: 0px 0px 8px 0px black;
+  box-shadow: 0px 0px 8px 0px black;
 }
 #enterCity:hover {
   color: #f8f9fa;
-  background: #3c39be;
-  border-color: #3c39be;
+  background: #7e7cdd;
+  border-color: #7e7cdd;
 }
 ::placeholder {
   color: whitesmoke;
   text-shadow: -2px 2px 2px black;
   border: none;
   text-align: center;
-  font-weight: bold;
 }
 
 #submitCity {
@@ -50,17 +50,16 @@ body {
   height: 25px;
   font-size: 13px;
   border: none;
- background-color: rgba(105, 105, 105, 0.37);
- text-shadow: -2px -3px 2px black;
+  background-color: rgba(105, 105, 105, 0.37);
+  text-shadow: -2px 2px 2px black;
   box-shadow: 0px 0px 8px 0px black;
   color: whitesmoke;
   border-radius: 4px;
- 
 }
 #submitCity:hover {
   color: #f8f9fa;
-  background: #3c39be;
-  border-color: #3c39be;
+  background: #7e7cdd;
+  border-color: #7e7cdd;
 }
 
 #typename {
@@ -72,20 +71,17 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  
 }
 #date {
   max-width: 200px;
   font-size: 18px;
-  font-weight: 200;
+  font-weight: 500;
   padding: 0px;
   margin: 0px auto;
   margin-top: 3px;
   text-align: center;
   align-items: center;
   padding-bottom: 5px;
-  text-shadow: -2px -3px 2px black;
-  font-weight: 600;
 }
 
 #date:hover {
@@ -116,16 +112,16 @@ span.row.tempreture {
 
 div.row.fTable {
   padding: 0px;
-  background-color: rgba(105, 105, 105, 0.37);
-   box-shadow: 0px 0px 8px 0px black;
+  box-shadow: 0px 0px -4px 0px black;
+  border: 1px solid #60667d;
   text-align: center;
-  font-size: 15px;
+  font-size: 13px;
   margin: 0px;
   max-width: 190px;
   align-items: baseline;
   max-height: 32px;
   border-radius: 3px;
-  margin-bottom: 2px;
+  margin-bottom: 4px;
 }
 div.row.fTable:hover {
   transform: scale(1.08);
@@ -146,42 +142,38 @@ h6 {
   margin-bottom: 5px;
   text-transform: capitalize;
   font-size: 29px;
-  text-shadow: -2px -3px 2px black;
+  text-shadow: 2px 3px 2px black;
   font-weight: 600;
 }
 hr {
   padding: 0px;
   margin: 0px;
-   box-shadow: 0px 0px 8px  black !important;
 }
 #CurrentLocation {
   margin: 0px;
   padding: 0px;
-  font-size: 13px;
-  letter-spacing: 2px;
-  
+  font-size: 12px;
+  letter-spacing: 3px;
 }
 #timezone {
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 400;
   padding: 0px;
   margin: 0px;
   text-align: center;
   letter-spacing: 1px;
-  text-shadow: -2px -3px 2px black;
   font-weight: 600;
 }
 
 #h2Temp {
   font-size: 39px;
-  text-shadow: -2px -3px 2px black;
+  text-shadow: 2px 3px 2px black;
   font-weight: 600;
 }
 h6 {
-  font-size: 16px;
+  font-size: 15px;
   text-transform: capitalize;
   padding-top: 10px;
-  text-shadow: -2px -3px 2px black;
   font-weight: 600;
 }
 #humidityAndwind {
@@ -189,8 +181,6 @@ h6 {
   margin: 0px;
   padding: 0px;
   font-size: 11px;
-  text-shadow: -2px -3px 2px black;
-  font-weight: 600;
   letter-spacing: 1px;
 }
 .active {
@@ -210,7 +200,7 @@ h6 {
   padding: 0px;
   text-align: center;
   text-decoration: none;
-  text-shadow: -2px -3px 2px black;
+
   font-weight: 600;
 }
 
@@ -220,10 +210,10 @@ h6 {
 }
 #min {
   color: #cddff0;
-   }
+}
 #minmax {
   font-size: 14px;
-  text-shadow: -2px -3px 2px black;
+  text-shadow: 2px 3px 2px black;
   font-weight: 600;
 }
 div.col {
@@ -244,22 +234,20 @@ div#containor {
   margin: 0px;
   width: 80px;
   padding: 0px;
-  
 }
 .footer {
-margin-top: -5px;
+  margin-top: -5px;
   text-align: center;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   text-decoration: none;
-  color: #085f63;
+  color: rgb(63, 76, 119);
 }
-i{
- font-size: 12px;
+i {
+  font-size: 12px;
 }
 i:hover {
   transform: scale(1.5);
 }
 #coder {
   font-size: 10px;
-
 }
