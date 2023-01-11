@@ -41,6 +41,7 @@ body {
   text-shadow: -2px 2px 2px black;
   border: none;
   text-align: center;
+font-size: 9px;
 }
 
 #submitCity {
