@@ -23,7 +23,7 @@ body {
   padding: 5px;
   width: 155px;
   height: 25px;
-  font-size: 13px;
+  font-size: 11px;
   border: none;
   background-color: rgba(105, 105, 105, 0.37);
   letter-spacing: 2px;
@@ -41,7 +41,6 @@ body {
   text-shadow: -2px 2px 2px black;
   border: none;
   text-align: center;
-font-size: 9px;
 }
 
 #submitCity {
